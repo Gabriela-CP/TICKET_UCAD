@@ -34,10 +34,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ]);
 
         // Mostrar mensaje de éxito
+        echo "<body style='background-color: #152036; margin: 0; padding: 20px; justify-content: center; align-items: center;'>";
         echo "<div style='font-family: Arial; max-width: 600px; margin: 50px auto; padding: 20px; background: #e6ffed; border: 1px solid #28a745; border-radius: 8px; text-align: center;'>";
-        echo "<h2 style='color: #28a745;'>¡Ticket creado exitosamente!</h2>";
+        echo "<img src='../../../media/img/logo.png' alt='Éxito' style='width: 80px; margin-bottom: 20px;'>";
+        echo "<h2 style='color: #455fd4;'>¡Ticket creado exitosamente!</h2>";
         echo "<p>El problema ha sido registrado en el sistema. Nos pondremos en contacto pronto.</p>";
-        
+        echo "<br><a href='form.html' style='display: inline-block; background-color: #455fd4; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px; margin-top: 10px; transition: 0.3s;'>Regresar al formulario</a>";
         echo "</div>";
 
     } catch(PDOException $e) {
